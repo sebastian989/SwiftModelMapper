@@ -30,7 +30,7 @@ it, simply add the following line to your Podfile:
 ## Usage
 
 First you need to import SwiftModelMapper in AppDelegate or where you want:
-```
+```swift
 import SwiftModelMapper
 ```
 
@@ -72,7 +72,7 @@ Let's assume that you have some JSON like that:
 ```
 
 And your User model looks like:
-```
+```swift
 class User: NSObject {
     var name: String?
     var age: NSNumber?
@@ -88,7 +88,7 @@ class User: NSObject {
 ```
 
 As you can see, this model has a property called address, this property is of type Address which is a class like this:
-```
+```swift
 class Address : NSObject {
     var street: String?
     var avenue: NSNumber?
@@ -96,7 +96,7 @@ class Address : NSObject {
 ```
 
 Using any JSON parser you need to transform this NSString to a NSDictionary representation:
-```
+```swift
 var error: NSError?
 var data = jsonData.dataUsingEncoding(NSUTF8StringEncoding)
 do{
@@ -107,13 +107,13 @@ do{
 ```
 
 Next you have to create an object and call 'fromDictionary' function passing the dictionary in the parameters:
-```
+```swift
 let user = User()
 user.fromDictionary(dataDictionary)
 ```
 
 Then you can use the model properties and functions:
-```
+```swift
 print(user.name!)
 print(user.address!.street!)
 ```
@@ -121,12 +121,12 @@ print(user.address!.street!)
 ### Mapping JSONArray to models Array
 
 Let`s supose that you have an array of dictionaries like this:
-```
+```swift
 let array = [["street":"sabaneta","avenue":12], ["street":"sabaneta","avenue":13]]
 ```
 
 You can get a models array in a simple way just calling 'fromJsonArray' function and passing the array in their parameters:
-```
+```swift
 let modelsArray: [Address] = Address.fromJsonArray(array)
 ```
 
@@ -135,7 +135,7 @@ To use 'fromJsonArray' function you don't need to instance the class, just call 
 ### Overriding Key Name for Attribute
 
 If your JSON have any key that doesn't match with the model property name, you can override the function 'customKeysName' in the model to map this key to the attribute. You have to return a dictionary with the model property name and the name that will receive in the json:
-```
+```swift
 override func customKeysName() -> [String : String]? {
     let customs = [
             "email": "user_email",
@@ -149,7 +149,7 @@ override func customKeysName() -> [String : String]? {
 
 The same process but you must use 'fromJSON' function.
 
-```
+```swift
 do{
     let jsonString = "{\"name\": \"Jose\",\"age\": 25,\"address\": {\"street\": \"Cupertino\",\"avenue\": 15},\"height\": 1.64,\"isMan\": true,\"anyDictionary\": {\"key\": 2},\"arrayAnyTypes\": [1, 2, 3, 4, 5],\"modelsArray\": [{\"street\": \"Medellín\",\"avenue\": 10}, {\"street\": \"Medellín\",\"avenue\": 11}]}"
     let userJ = User()
@@ -168,7 +168,7 @@ Must use try catch blocks to do error handling.
 
 If your model and sub models extends of NSObject:
 
-```
+```swift
 class User: NSObject {
     var name: String?
     var age: NSNumber?
@@ -181,7 +181,7 @@ class User: NSObject {
 }
 ```
 
-```
+```swift
 class Address: NSObject {
     var street: String?
     var avenue: NSNumber?
@@ -196,7 +196,7 @@ class Address: NSObject {
 
 And it's initialized:
 
-```
+```swift
 let homeAddress = Address(street: "Columbus", avenue: 12)
 let workAddress = Address(street: "Sabaneta", avenue: 13)
 let marketAddress = Address(street: "Cupertino", avenue: 15)
@@ -214,14 +214,14 @@ user.modelsArray = [workAddress, marketAddress]
 
 Create a dictionary from your model it's simply like:
 
-```
+```swift
 let myDictionary: [String: AnyObject] = user.toDictionary()
 ```
 
 ### Create a JSON String from a model:
 
 The same process but you must use 'fromJSON' function.
-```
+```swift
 do {
     let jsonString = try user.toJSON()
     print("toJSON: " + jsonString)

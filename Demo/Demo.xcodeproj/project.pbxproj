@@ -16,9 +16,9 @@
 		1202C3A71C7CC70E005615F9 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202C3A61C7CC70E005615F9 /* DemoUITests.swift */; };
 		1202C3B71C7CC756005615F9 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202C3B51C7CC756005615F9 /* Address.swift */; };
 		1202C3B81C7CC756005615F9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202C3B61C7CC756005615F9 /* User.swift */; };
-		9E1BEA781C7E81BC009BD700 /* ParceSwift+From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1BEA771C7E81BC009BD700 /* ParceSwift+From.swift */; };
-		FABDB5DE1C7F57AA0055316A /* ParceSwift+To.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDB5DD1C7F57AA0055316A /* ParceSwift+To.swift */; };
-		FABDB5E01C7F57C00055316A /* ParceSwift+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABDB5DF1C7F57C00055316A /* ParceSwift+Commons.swift */; };
+		9E9A96C21E5F42C5000EE2E0 /* ModelMapper+Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A96BF1E5F42C5000EE2E0 /* ModelMapper+Commons.swift */; };
+		9E9A96C31E5F42C5000EE2E0 /* ModelMapper+From.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A96C01E5F42C5000EE2E0 /* ModelMapper+From.swift */; };
+		9E9A96C41E5F42C5000EE2E0 /* ModelMapper+To.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9A96C11E5F42C5000EE2E0 /* ModelMapper+To.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		1202C3A81C7CC70E005615F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1202C3B51C7CC756005615F9 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		1202C3B61C7CC756005615F9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		9E1BEA771C7E81BC009BD700 /* ParceSwift+From.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ParceSwift+From.swift"; path = "../../ParceSwift/ParceSwift+From.swift"; sourceTree = "<group>"; };
-		FABDB5DD1C7F57AA0055316A /* ParceSwift+To.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ParceSwift+To.swift"; path = "../../ParceSwift/ParceSwift+To.swift"; sourceTree = "<group>"; };
-		FABDB5DF1C7F57C00055316A /* ParceSwift+Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ParceSwift+Commons.swift"; path = "../../ParceSwift/ParceSwift+Commons.swift"; sourceTree = "<group>"; };
+		9E9A96BF1E5F42C5000EE2E0 /* ModelMapper+Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModelMapper+Commons.swift"; sourceTree = "<group>"; };
+		9E9A96C01E5F42C5000EE2E0 /* ModelMapper+From.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModelMapper+From.swift"; sourceTree = "<group>"; };
+		9E9A96C11E5F42C5000EE2E0 /* ModelMapper+To.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModelMapper+To.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		1202C3851C7CC70E005615F9 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				1202C3B91C7CC75C005615F9 /* Parse */,
+				9E9A96BE1E5F42C5000EE2E0 /* SwiftModelMapper */,
 				1202C3B41C7CC756005615F9 /* Models */,
 				1202C3861C7CC70E005615F9 /* AppDelegate.swift */,
 				1202C3881C7CC70E005615F9 /* ViewController.swift */,
@@ -146,14 +146,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		1202C3B91C7CC75C005615F9 /* Parse */ = {
+		9E9A96BE1E5F42C5000EE2E0 /* SwiftModelMapper */ = {
 			isa = PBXGroup;
 			children = (
-				9E1BEA771C7E81BC009BD700 /* ParceSwift+From.swift */,
-				FABDB5DD1C7F57AA0055316A /* ParceSwift+To.swift */,
-				FABDB5DF1C7F57C00055316A /* ParceSwift+Commons.swift */,
+				9E9A96BF1E5F42C5000EE2E0 /* ModelMapper+Commons.swift */,
+				9E9A96C01E5F42C5000EE2E0 /* ModelMapper+From.swift */,
+				9E9A96C11E5F42C5000EE2E0 /* ModelMapper+To.swift */,
 			);
-			name = Parse;
+			name = SwiftModelMapper;
+			path = ../../SwiftModelMapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +224,7 @@
 				TargetAttributes = {
 					1202C3821C7CC70E005615F9 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 62JAEBE232;
+						DevelopmentTeam = 9KVLLZ5V4G;
 						LastSwiftMigration = 0800;
 					};
 					1202C3961C7CC70E005615F9 = {
@@ -293,10 +294,10 @@
 				1202C3B81C7CC756005615F9 /* User.swift in Sources */,
 				1202C3B71C7CC756005615F9 /* Address.swift in Sources */,
 				1202C3891C7CC70E005615F9 /* ViewController.swift in Sources */,
+				9E9A96C41E5F42C5000EE2E0 /* ModelMapper+To.swift in Sources */,
+				9E9A96C21E5F42C5000EE2E0 /* ModelMapper+Commons.swift in Sources */,
+				9E9A96C31E5F42C5000EE2E0 /* ModelMapper+From.swift in Sources */,
 				1202C3871C7CC70E005615F9 /* AppDelegate.swift in Sources */,
-				FABDB5DE1C7F57AA0055316A /* ParceSwift+To.swift in Sources */,
-				FABDB5E01C7F57C00055316A /* ParceSwift+Commons.swift in Sources */,
-				9E1BEA781C7E81BC009BD700 /* ParceSwift+From.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,11 +442,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 62JAEBE232;
+				DEVELOPMENT_TEAM = 9KVLLZ5V4G;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.parce.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapper.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -455,11 +456,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 62JAEBE232;
+				DEVELOPMENT_TEAM = 9KVLLZ5V4G;
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.parce.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapper.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

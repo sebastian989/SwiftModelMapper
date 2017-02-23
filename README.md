@@ -1,14 +1,14 @@
-# ParceSwift
+# SwiftModelMapper
 
 ## Usage
 
-ParceSwift is a delightful library for iOS specifically Swift. It's built with high quality standards to parse dictionaries to models quickly and safely.
+SwiftModelMapper is a delightful library for iOS specifically Swift. It's built with high quality standards to parse dictionaries to models quickly and safely.
 
-Choose ParceSwift for your next project, or migrate over your existing projects, we guarantee you'll be happy you did!
+Choose SwiftModelMapper for your next project, or migrate over your existing projects, we guarantee you'll be happy you did!
 
 ## How To Get Started
 
-* Download ParceSwift and try out the included iPhone Demo
+* Download SwiftModelMapper and try out the included iPhone Demo
 
 ## Installation
 
@@ -17,21 +17,21 @@ Choose ParceSwift for your next project, or migrate over your existing projects,
 
 ### CocoaPods:
 
-ParceSwift is available through [CocoaPods](http://cocoapods.org). To install
+SwiftModelMapper is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod 'ParceSwift'
+    pod 'SwiftModelMapper'
 
 ### Copying files into your project
 
-1. Drag and Drop ParceSwift folder into your project
+1. Drag and Drop SwiftModelMapper folder into your project
 2. In "Choose options dialog" check "Copy items if needed" and select "Create Groups" option, then press finish Button.
 
 ## Usage
 
-First you need to import ParceSwift in AppDelegate or where you want:
+First you need to import SwiftModelMapper in AppDelegate or where you want:
 ```
-import ParceSwift
+import SwiftModelMapper
 ```
 
 #### Important things
@@ -42,7 +42,7 @@ import ParceSwift
 
 ### Get a model from dictionary:
 
-ParceSwift is an extension of NSObject, all you need to do is create a new object and start to transform a dictionary to any classes.
+SwiftModelMapper is an extension of NSObject, all you need to do is create a new object and start to transform a dictionary to any classes.
 
 Let's assume that you have some JSON like that:
 ```

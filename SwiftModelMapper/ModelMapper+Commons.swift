@@ -11,7 +11,7 @@ import Foundation
 /**
  NSObject extension to transform a Dictionary to and from object
  */
-public extension NSObject {
+extension NSObject {
         
     /**
      Get a dictionary with label-value of properties of the current NSObject
@@ -45,7 +45,7 @@ public extension NSObject {
         return anyClass as! NSObject.Type
     }
     
-    public func customKeysName() -> [String : String]? {
+    open func customKeysName() -> [String : String]? {
         return nil
     }
     
